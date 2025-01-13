@@ -1,10 +1,19 @@
+// import React from 'react'; // Remove this line
+import { useEffect, useState } from 'react';
+import Navigation from '../components/Navigation';
 import React from 'react';
-import Navigation from '../components/Navigation'; // Import Navigation component
 
 function GalleryPage() {
+  // Define local image links
+  const imageLinks = [
+    '/images/image1.jpg',
+    '/images/image2.jpg',
+    '/images/image3.jpg',
+    // Add more image paths as needed
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-dublin-gold-light to-white">
-      {/* Add Navigation to the Page */}
       <Navigation />
 
       <h1 className="text-4xl font-bold text-center text-dublin-green-dark py-12">
@@ -15,14 +24,21 @@ function GalleryPage() {
           Enjoy some memories from past reunions and events.
         </p>
 
-        {/* You can replace the divs below with actual image elements */}
         <div className="grid grid-cols-3 gap-4">
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
-          <div className="aspect-square bg-dublin-gold-light rounded"></div>
+          {imageLinks.length > 0 ? (
+            imageLinks.map((url, index) => (
+              <img
+                key={index}
+                src={url}
+                alt={`Reunion Memory ${index + 1}`}
+                className="aspect-square object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              />
+            ))
+          ) : (
+            <p className="text-center text-dublin-green-dark col-span-3">
+              No images available yet.
+            </p>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Clock, MapPin, Music, Utensils, Camera, ArrowLeft, PartyPopper } from 'lucide-react';
+import { Calendar, Clock, MapPin, Music, Utensils, ArrowLeft, PartyPopper } from 'lucide-react';
 import Navigation from '../components/Navigation';
 
 function EventDetails() {

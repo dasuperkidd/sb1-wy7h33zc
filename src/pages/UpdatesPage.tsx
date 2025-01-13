@@ -1,4 +1,3 @@
-import React from 'react';
 import Navigation from '../components/Navigation'; // Import Navigation component
 
 function UpdatesPage() {
@@ -17,7 +16,7 @@ function UpdatesPage() {
 
         {/* List of announcements */}
         <div className="space-y-6">
-          <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg">
+          <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
             <h3 className="font-semibold text-xl">
               Early Bird Registration Now Open!
             </h3>
@@ -25,10 +24,16 @@ function UpdatesPage() {
               Register before August 1st for special pricing.
             </p>
           </div>
-          <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg">
+          <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
             <h3 className="font-semibold text-xl">Share Your Memories</h3>
             <p className="text-dublin-green-dark">
               Upload your favorite DHS photos to the gallery.
+            </p>
+          </div>
+          <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <h3 className="font-semibold text-xl">Plus One Fees!</h3>
+            <p className="text-dublin-green-dark">
+              Don't forget to submit your Plus One Fee of $75 by January 31, 2025.
             </p>
           </div>
           {/* Add more announcements */}

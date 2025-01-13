@@ -4,6 +4,7 @@ import EventDetails from './pages/EventDetails';
 import AttendeesPage from './pages/AttendeesPage'; // Import new page
 import GalleryPage from './pages/GalleryPage'; // Import new page
 import UpdatesPage from './pages/UpdatesPage'; // Import Updates Page (this was missing)
+import React from 'react';
 
 function App() {
   return (
