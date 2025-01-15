@@ -7,7 +7,7 @@ function UpdatesPage() {
       <Navigation />
 
       <h1 className="text-4xl font-bold text-center text-dublin-green-dark py-12">
-        Updates & Announcements
+        Updates & Announcements 📣
       </h1>
       <div className="container mx-auto px-4">
         <p className="text-xl text-center text-dublin-green-dark mb-8">
@@ -18,22 +18,21 @@ function UpdatesPage() {
         <div className="space-y-6">
           <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
             <h3 className="font-semibold text-xl">
-              Early Bird Registration Now Open!
-            </h3>
+             Plus One Fees!</h3>
             <p className="text-dublin-green-dark">
-              Register before August 1st for special pricing.
+            Don't forget to submit your Plus One Fee of $75 by January 31, 2025. All payments are sent to $$Class2010DHS.
             </p>
           </div>
           <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <h3 className="font-semibold text-xl">Share Your Memories</h3>
+            <h3 className="font-semibold text-xl">Share Your Memories 📸</h3>
             <p className="text-dublin-green-dark">
               Upload your favorite DHS photos to the gallery.
             </p>
           </div>
           <div className="p-6 bg-dublin-gold-light rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <h3 className="font-semibold text-xl">Plus One Fees!</h3>
+            <h3 className="font-semibold text-xl">More To Come!</h3>
             <p className="text-dublin-green-dark">
-              Don't forget to submit your Plus One Fee of $75 by January 31, 2025.
+             Stick around for more announcemnts, updates, and surprises!
             </p>
           </div>
           {/* Add more announcements */}

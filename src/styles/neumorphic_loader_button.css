@@ -1,0 +1,54 @@
+/* styles/neumorphic_loader_button.css */
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    background-color: #FFD500; /* Vibrant Yellow */
+    border-radius: 30px;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #06362D; /* Deep Emerald for contrast */
+    box-shadow: 6px 6px 12px #bba800, -6px -6px 12px #ffff4d; /* Neumorphic effect */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:hover {
+    box-shadow: inset 4px 4px 8px #bba800, inset -4px -4px 8px #ffff4d;
+  }
+  
+  button:active {
+    box-shadow: inset 2px 2px 5px #bba800, inset -2px -2px 5px #ffff4d;
+    transform: scale(0.98);
+  }
+  
+  button.loading::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 3px solid #DEE2B1; /* Soft Sage */
+    border-top: 3px solid #06362D; /* Deep Emerald */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  button:disabled {
+    background-color: #D1A505; /* Goldenrod */
+    color: #DEE2B1;
+    box-shadow: none;
+    cursor: not-allowed;
+  }

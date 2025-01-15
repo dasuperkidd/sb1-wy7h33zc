@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,35 @@
     <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Gallery container where images will be dynamically loaded -->
+      <div class="gallery"></div>
+    </div>
+    
+    <script>
+      // List of Dropbox image links (modify with your actual links)
+      const imageLinks = [
+      'https://www.dropbox.com/scl/fi/k0z2z67ibefxpiuquoqvx/Photo-Jan-10-2025-8-07-01-AM-3-1.jpg?raw=1',
+        'https://www.dropbox.com/scl/fi/wkw4582feh12oriwpqjdw/Photo-Jan-10-2025-8-07-01-AM-1.jpg?raw=1',
+        'https://www.dropbox.com/scl/fi/8rdpm1967wwt2ydw7c72n/Photo-Nov-30-2024-1-12-19-PM.jpg?raw=1',
+        'https://www.dropbox.com/scl/fi/vqbiqckah4mx3bbbxrufb/Photo-Nov-25-2024-9-42-00-PM-16.jpg?raw=1',
+        'https://www.dropbox.com/scl/fi/glbdsu9t9igzjd0rtd3k6/Photo-Nov-25-2024-9-42-00-PM-15.jpg?raw=1',
+        // Add more image links here
+      ];
+
+      // Select the gallery container
+      const gallery = document.querySelector('.gallery');
+
+      // Loop through the image links array and create an <img> tag for each link
+      imageLinks.forEach(link => {
+        const imgElement = document.createElement('img');  // Create an <img> element
+        imgElement.src = link;  // Set the src to the Dropbox image link
+        imgElement.alt = "Gallery Image";  // Optional: Add a description
+        imgElement.classList.add('gallery-img');  // Optional: Add a class for styling
+        gallery.appendChild(imgElement);  // Add the <img> to the gallery container
+      });
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

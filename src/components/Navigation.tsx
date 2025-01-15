@@ -7,6 +7,8 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="bg-dublin-green-dark text-white">
       <div className="container mx-auto px-4">
@@ -39,6 +41,12 @@ export default function Navigation() {
             <Link to="/updates" className="hover:text-dublin-gold transition">
               Updates
             </Link>
+            <Link to="/playlist" className="hover:text-dublin-gold transition">
+              2010 Playlist
+            </Link>
+            <Link to="/profiles" className="hover:text-dublin-gold transition">
+              Profiles
+            </Link>
           </div>
 
           {/* Hamburger Icon for Mobile */}
@@ -64,23 +72,30 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col space-y-4 bg-dublin-green-dark text-white p-4">
-          <Link to="/" className="hover:text-dublin-gold transition">
-            HomePage
+          <Link to="/" className="hover:text-dublin-gold transition" onClick={closeMenu}>
+            Home
           </Link>
           <Link
             to="/event-details"
             className="hover:text-dublin-gold transition"
+            onClick={closeMenu}
           >
-            EventDetails
+            Event Details
           </Link>
-          <Link to="/attendees" className="hover:text-dublin-gold transition">
+          <Link to="/attendees" className="hover:text-dublin-gold transition" onClick={closeMenu}>
             Attendees
           </Link>
-          <Link to="/gallery" className="hover:text-dublin-gold transition">
+          <Link to="/gallery" className="hover:text-dublin-gold transition" onClick={closeMenu}>
             Gallery
           </Link>
-          <Link to="/updates" className="hover:text-dublin-gold transition">
+          <Link to="/updates" className="hover:text-dublin-gold transition" onClick={closeMenu}>
             Updates
+          </Link>
+          <Link to="/playlist" className="hover:text-dublin-gold transition" onClick={closeMenu}>
+            2010 Playlist
+          </Link>
+          <Link to="/profiles" className="hover:text-dublin-gold transition" onClick={closeMenu}>
+            Profiles
           </Link>
         </div>
       )}

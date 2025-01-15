@@ -1,16 +1,25 @@
-// import React from 'react'; // Remove this line
 import { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
-import React from 'react';
 
 function GalleryPage() {
-  // Define local image links
-  const imageLinks = [
-    '/images/image1.jpg',
-    '/images/image2.jpg',
-    '/images/image3.jpg',
-    // Add more image paths as needed
-  ];
+  // Explicitly define the type as string[]
+  const [imageLinks, setImageLinks] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Simulate fetching image links (replace with actual fetch if needed)
+    const fetchImages = () => {
+      const links: string[] = [
+        'https://www.dropbox.com/scl/fi/k0z2z67ibefxpiuquoqvx/Photo-Jan-10-2025-8-07-01-AM-3-1.jpg?rlkey=4ml31qzfgo5pryxmf58fefur1&st=y2f85fqe&raw=1',
+        'https://www.dropbox.com/scl/fi/wkw4582feh12oriwpqjdw/Photo-Jan-10-2025-8-07-01-AM-1.jpg?rlkey=zq3irowzigaiw9ovxf90m0dgs&st=9qvbm6ih&raw=1',
+        'https://www.dropbox.com/scl/fi/8rdpm1967wwt2ydw7c72n/Photo-Nov-30-2024-1-12-19-PM.jpg?rlkey=3zfe1tiam1rpf5kozd9bsg8bo&st=xn33f2gi&raw=1',
+        'https://www.dropbox.com/scl/fi/vqbiqckah4mx3bbbxrufb/Photo-Nov-25-2024-9-42-00-PM-16.jpg?rlkey=d4g7ezxcg4tfhl7qtruzqowmt&st=tlxsfgla&raw=1',
+        'https://www.dropbox.com/scl/fi/glbdsu9t9igzjd0rtd3k6/Photo-Nov-25-2024-9-42-00-PM-15.jpg?rlkey=qp8y9cuycp4t10cxt9dhytaoq&st=conxdvnd&raw=1',
+      ];
+      setImageLinks(links);  // No more TypeScript error
+    };
+
+    fetchImages();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-dublin-gold-light to-white">
@@ -21,7 +30,7 @@ function GalleryPage() {
       </h1>
       <div className="container mx-auto px-4">
         <p className="text-xl text-center text-dublin-green-dark mb-8">
-          Enjoy some memories from past reunions and events.
+          Enjoy some memories from the past.
         </p>
 
         <div className="grid grid-cols-3 gap-4">
